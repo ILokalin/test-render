@@ -1,10 +1,15 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import init from './init.jsx';
-import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter } from 'react-router-dom';
+import init from './init.js';
 
-const app = async () => {
-  const root = ReactDOM.createRoot(document.getElementById('chat'));
-  root.render(await init());
-};
-
-app();
+const chat = ReactDOM.createRoot(document.getElementById('chat'));
+chat.render(
+  <BrowserRouter>
+    <React.StrictMode>
+      {await init()}
+    </React.StrictMode>
+  </BrowserRouter>,
+);

@@ -1,17 +1,25 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Chat(Slack)",
+  "main": "src/index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
-    "start": "start-server -s ./frontend/build",
+    "start": "npx start-server -s ./build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "cd frontend && npm ci"
   },
-  "author": "https://github.com/GeorgyKomkov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelKochetkov/frontend-project-12.git"
+  },
+  "author": "Pavel Kochetkov",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelKochetkov/frontend-project-12/issues"
+  },
+  "homepage": "https://github.com/PavelKochetkov/frontend-project-12#readme",
   "dependencies": {
-    "@hexlet/chat-server": "1.1.6"
+    "@hexlet/chat-server": "^2.0.3"
   }
 }
