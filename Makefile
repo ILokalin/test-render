@@ -11,4 +11,4 @@ start-backend:
 	npx start-server
 
 install:
-	npm ci && make -C frontend install
+	npm i && make -C frontend install
