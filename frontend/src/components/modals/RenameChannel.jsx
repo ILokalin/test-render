@@ -36,14 +36,85 @@ const RenameChannel = (props) => {
     await editChannel(data).unwrap();
   };
 
+  // useEffect(
+  //   () => {
+  //     debugger
+  //     console.log(channels, modalChannelName, сhannelId, isSuccses, errorStatus, editChannel);
+  //   },
+  //   [, modalChannelName, , , errorStatus, editChannel, t]
+  // )
+
   useEffect(
     () => {
-      debugger
-      console.log(channels, modalChannelName, сhannelId, isSuccses, errorStatus, editChannel);
+      console.log('channels', channels)
     },
-    [channels, modalChannelName, сhannelId, isSuccses, errorStatus, editChannel]
+    [channels]
   )
 
+  useEffect(
+    () => {
+      console.log('modalChannelName', modalChannelName)
+    },
+    [modalChannelName]
+  )
+
+  useEffect(
+    () => {
+      console.log('сhannelId', сhannelId)
+    },
+    [сhannelId]
+  )
+
+  useEffect(
+    () => {
+      console.log('isSuccses', isSuccses);
+    },
+    [isSuccses]
+  )
+
+  useEffect(
+    () => {
+      console.log('errorStatus', errorStatus)
+    },
+    [errorStatus]
+  )
+
+  useEffect(
+    () => {
+      console.log('editChannel', editChannel)
+    },
+    [editChannel]
+  )
+
+  useEffect(
+    () => {
+      console.log('t', t)
+    },
+    [t]
+  )
+
+  useEffect(
+    () => {
+      console.log('inputRef', inputRef);
+    },
+    [inputRef.current]
+  )
+
+  useEffect(
+    () => {
+      console.log('handleClose', handleClose);
+    },
+    [handleClose]
+  )
+
+  // useEffect(
+  //   () => {
+
+  //   },
+  //   []
+  // )
+
+  
   useEffect(
     () => {
       inputRef.current.select();
@@ -64,11 +135,11 @@ const RenameChannel = (props) => {
     }
   }, [isSuccses, errorStatus, t, handleClose]);
 
-  useEffect(() => {
-    const myProps = props;
-    debugger
-    console.log(myProps);
-  });
+  // useEffect(() => {
+  //   const myProps = props;
+  //   debugger
+  //   console.log(myProps);
+  // });
 
   return (
     <>
