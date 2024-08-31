@@ -29,7 +29,7 @@ const ModalContainer = () => {
 
   return (
     <Modal show={isOpen} onHide={handleCloseModal} centered>
-      <Container handleClose={handleCloseModal}/>
+      <Container handleClose={handleCloseModal} Modal={Modal}/>
     </Modal>
   );
 };

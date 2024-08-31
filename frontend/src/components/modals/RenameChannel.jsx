@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Formik, useFormik } from "formik";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -18,7 +18,7 @@ import {
 import filterText from "../../utils/filterText";
 
 const RenameChannel = (props) => {
-  const { handleClose } = props;
+  const { handleClose, Modal } = props;
   const inputRef = useRef(null);
 
   const { data: channels } = useGetChannelsQuery();
