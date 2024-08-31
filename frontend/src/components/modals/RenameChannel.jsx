@@ -86,7 +86,7 @@ const RenameChannel = (props) => {
 
   return (
     <>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title>{t("modal.renameChannelTitle")}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
