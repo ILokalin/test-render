@@ -41,9 +41,9 @@ const RenameChannel = (props) => {
   const {
     handleSubmit,
     handleChange,
-    valuesm,
+    values,
     errors,
-    
+
   } = useFormik({
     validationSchema: createSchemaValidationRenameChannel(channelNames, t),
     initialValues: {
