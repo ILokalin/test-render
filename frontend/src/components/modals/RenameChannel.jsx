@@ -69,17 +69,17 @@ const RenameChannel = (props) => {
     }
   )
 
-  useEffect(() => {
-    if (isSuccses) {
-      toast.success(t("toast.сhannelRenamedSuccessfully"));
-      handleClose();
-    }
+  // useEffect(() => {
+  //   if (isSuccses) {
+  //     toast.success(t("toast.сhannelRenamedSuccessfully"));
+  //     handleClose();
+  //   }
 
-    if (!isSuccses && errorStatus === "FETCH_ERROR") {
-      toast.error(t("toast.networkError"));
-      handleClose();
-    }
-  }, [isSuccses, errorStatus, t, handleClose]);
+  //   if (!isSuccses && errorStatus === "FETCH_ERROR") {
+  //     toast.error(t("toast.networkError"));
+  //     handleClose();
+  //   }
+  // }, [isSuccses, errorStatus, t, handleClose]);
 
   return (
     <>
