@@ -43,7 +43,7 @@ const RenameChannel = (props) => {
     handleChange,
     values,
     errors,
-
+    isValid
   } = useFormik({
     validationSchema: createSchemaValidationRenameChannel(channelNames, t),
     initialValues: {
@@ -99,7 +99,7 @@ const RenameChannel = (props) => {
             ref={inputRef}
             className={`form-control ${!isValid ? "mb-2 is-invalid" : "mb-2"}`}
             id="name"
-            autoFocus
+            // autoFocus
           />
 
           <Form.Label className="visually-hidden" htmlFor="name">
