@@ -119,6 +119,7 @@ const RenameChannel = (props) => {
     () => {
       inputRef.current.select();
       debugger
+      console.log('Component ready')
     },
     [],
   )
