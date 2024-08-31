@@ -26,7 +26,19 @@ const App = () => (
           <Route path={getRoute('PAGE_SIGNUP')} element={<Signup />} />
           <Route path={getRoute('PAGE_NOT_FOUND')} element={<NotFoundPage />} />
         </Routes>
-        <ToastContainer />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Zoom}
+        />
       </ErrorBoundary>
     </Provider>
   </div>
