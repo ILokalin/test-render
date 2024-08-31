@@ -55,8 +55,8 @@ const RenameChannel = (props) => {
   });
 
   useEffect(() => {
-    inputRef.current.focus();
     inputRef.current.select();
+    inputRef.current.focus();
     console.log("Component ready");
   }, []);
 
