@@ -38,7 +38,13 @@ const RenameChannel = (props) => {
     await editChannel(data).unwrap();
   };
 
-  const {} = useFormik({
+  const {
+    handleSubmit,
+    handleChange,
+    valuesm,
+    errors,
+    
+  } = useFormik({
     validationSchema: createSchemaValidationRenameChannel(channelNames, t),
     initialValues: {
       name: modalChannelName,
