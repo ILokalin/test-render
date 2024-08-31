@@ -107,12 +107,47 @@ const RenameChannel = (props) => {
     [handleClose]
   )
 
-  // useEffect(
-  //   () => {
+  useEffect(
+    () => {
+      console.log('validationSchema', validationSchema)
+    },
+    [validationSchema]
+  )
 
-  //   },
-  //   []
-  // )
+  useEffect(
+    () => {
+      console.log('renameChannel', renameChannel)
+    },
+    [renameChannel]
+  )
+
+  useEffect(
+    () => {
+      console.log()
+    },
+    []
+  )
+
+  useEffect(
+    () => {
+      console.log()
+    },
+    []
+  )
+
+  useEffect(
+    () => {
+      console.log()
+    },
+    []
+  )
+
+  useEffect(
+    () => {
+      console.log()
+    },
+    []
+  )
 
   
   useEffect(
@@ -154,6 +189,7 @@ const RenameChannel = (props) => {
           }}
           validationSchema={validationSchema}
           validateOnBlur={false}
+          validateOnChange={false}
           onSubmit={renameChannel}
         >
           {({
