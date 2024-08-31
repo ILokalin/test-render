@@ -93,7 +93,7 @@ const RenameChannel = (props) => {
         <Form onSubmit={handleSubmit}>
           <Form.Control
             name="name"
-            value={values.name}
+            value={"Test"}
             onChange={handleChange}
             type="text"
             ref={inputRef}
