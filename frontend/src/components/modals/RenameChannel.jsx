@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Formik, useFormik } from "formik";
-import { Button, Form } from "react-bootstrap";
+import { useFormik } from "formik";
+import { Modal, Button, Form } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -18,7 +18,7 @@ import {
 import filterText from "../../utils/filterText";
 
 const RenameChannel = (props) => {
-  const { handleClose, Modal } = props;
+  const { handleClose } = props;
   const inputRef = useRef(null);
 
   const { data: channels } = useGetChannelsQuery();
@@ -62,6 +62,7 @@ const RenameChannel = (props) => {
   // )
 
   useEffect(() => {
+    inputRef.current.focus();
     inputRef.current.select();
     console.log("Component ready");
   }, []);
@@ -78,12 +79,6 @@ const RenameChannel = (props) => {
     }
   }, [isSuccses, errorStatus, t, handleClose]);
 
-  // useEffect(() => {
-  //   const myProps = props;
-  //   debugger
-  //   console.log(myProps);
-  // });
-
   return (
     <>
       <Modal.Header>
@@ -93,7 +88,7 @@ const RenameChannel = (props) => {
         <Form onSubmit={handleSubmit}>
           <Form.Control
             name="name"
-            value={"Test"}
+            value={values.name}
             onChange={handleChange}
             type="text"
             ref={inputRef}
