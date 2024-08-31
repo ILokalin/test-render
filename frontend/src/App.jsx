@@ -37,7 +37,6 @@ const App = () => (
           draggable
           pauseOnHover
           theme="light"
-          transition={Zoom}
         />
       </ErrorBoundary>
     </Provider>
