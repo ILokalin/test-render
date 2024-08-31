@@ -63,6 +63,7 @@ const RenameChannel = (props) => {
   useEffect(
     () => {
       console.log(document.querySelector('*:focus'))
+      return () => console.log(document.querySelector('*:focus'))
     }
   )
 
