@@ -54,18 +54,17 @@ const RenameChannel = (props) => {
     onSubmit: renameChannel,
   });
 
-  // useEffect(
-  //   () => {
-  //     console.log()
-  //   },
-  //   []
-  // )
-
   useEffect(() => {
     inputRef.current.focus();
     inputRef.current.select();
     console.log("Component ready");
   }, []);
+
+  useEffect(
+    () => {
+      console.log(document.querySelector('*:focus'))
+    }
+  )
 
   useEffect(() => {
     if (isSuccses) {
