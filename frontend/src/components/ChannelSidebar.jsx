@@ -5,7 +5,7 @@ import { useGetChannelsQuery } from '../api/channelsApi.js';
 import { changeChannel, setChannelModal, selectCurrentChannelId } from '../store/slice/appSlice.js';
 import Loading from './Spinner.jsx';
 import socket from '../socket.js';
-import ModalContainer from './modals/index.js';
+
 import DropdownButton from './DropdownButton.jsx';
 
 const ChannelSidebar = () => {
@@ -51,7 +51,6 @@ const ChannelSidebar = () => {
           <span className="visually-hidden">+</span>
         </button>
       </div>
-      <ModalContainer />
       <ul id="channel-box" className="nav flex-column nav-pills nav-fill px-2 mb-3 overflow-auto h-100 d-block">
         {channels?.map((channel) => (
           <DropdownButton key={channel.id} data={channel} />
