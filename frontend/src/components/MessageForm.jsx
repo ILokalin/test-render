@@ -52,7 +52,6 @@ const MessageForm = () => {
                 name="message"
                 placeholder={t('messageForm.placeholder')}
                 className="border-0 p-0 ps-2 form-control"
-                autoFocus
                 required
                 innerRef={inputRef}
                 aria-label={t('messageForm.label')}
